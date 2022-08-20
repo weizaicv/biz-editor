@@ -3,7 +3,7 @@ name: test
 on:
     push:
         branches:
-            - master
+            - course-stage3-week2-01-github-actions
         paths:
             - '.github/workflows/**'
             - '__test__/**'
