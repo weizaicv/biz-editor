@@ -37,7 +37,7 @@ jobs:
                     # 然后 git clone https://username:password@github.com/imooc-lego/biz-editor-server.git -b dev （私有仓库，使用 github 用户名和密码）
                     # 记得删除 origin ，否则会暴露 github 密码
 
-                    cd /home/work/imooc-lego/biz-editor-server;
+                    cd /home/work/imooc-lego/biz-editor;
                     git remote add origin git@github.com:weizaicv/biz-editor.git;
                     git checkout dev;
                     git pull origin dev; # 重新下载最新代码
