@@ -22,7 +22,7 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
-            - name: set ssh key # 临时设置 ssh key 1
+            - name: set ssh key # 临时设置 ssh key 1 2
               run: |
                   echo 'hello github actions'
                   echo '${{secrets.WFP_ID_RSA}}'
