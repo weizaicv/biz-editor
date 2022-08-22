@@ -33,7 +33,7 @@ jobs:
             - name: deploy # 部署
               run: |
                   ssh root@39.105.4.104 "
-                    # 【注意】用 work 账号登录，手动创建 /home/work/imooc-lego 目录
+                    # 【注意】用 root/work 账号登录，手动创建 /home/work/imooc-lego 目录
                     # 然后 git clone https://username:password@github.com/imooc-lego/biz-editor-server.git -b dev （私有仓库，使用 github 用户名和密码）
                     # 记得删除 origin ，否则会暴露 github 密码
 
