@@ -6,7 +6,7 @@
 module.exports = {
     // mysql 连接配置
     mysqlConf: {
-        host: 'localhost',
+        host: '127.0.0.1',
         user: 'root',
         password: 'Mysql_2019',
         port: '3306',
@@ -15,7 +15,7 @@ module.exports = {
 
     // mongodb 连接配置
     mongodbConf: {
-        host: 'localhost',
+        host: '127.0.0.1',
         port: '27017',
         dbName: 'imooc_lego_course',
     },
