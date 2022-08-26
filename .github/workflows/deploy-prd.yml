@@ -27,6 +27,6 @@ jobs:
                   ssh-keyscan "39.105.4.104" >> ~/.ssh/known_hosts
             - name: deploy # 部署  39.105.4.104 => secrets.IP165 可以作为github变量传入！ shell脚本传入管理员密码 github.ref表示tag变量
               run: |
-                  ssh root@39.105.4.104 "bash -s" < bin/deploy.sh ${{secretsWFP_PASSWORD}} ${{github.ref}}
+                  ssh root@39.105.4.104 "bash -s" < bin/deploy.sh ${{secrets.WFP_PASSWORD}} ${{github.ref}}
             - name: delete ssh key # 删除 ssh key
               run: rm -rf ~/.ssh/id_rsa
