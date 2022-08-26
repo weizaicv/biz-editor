@@ -1,0 +1,32 @@
+name: deploy for production
+
+on:
+    push:
+        tags:
+            - 'v*.*.*' # 只针对 tag
+jobs:
+    deploy-dev:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 14
+            - name: lint and test
+              run: |
+                  npm i
+                  npm run lint
+                  npm run test:remote
+            - name: set ssh key # 临时设置 ssh key 1 2
+              run: |
+                  mkdir -p ~/.ssh/
+                  echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_rsa # secret 在这里配置 https://github.com/imooc-lego/biz-editor-server/settings/secrets
+                  chmod 600 ~/.ssh/id_rsa
+                  ssh-keyscan "39.105.4.104" >> ~/.ssh/known_hosts
+            - name: deploy # 部署  39.105.4.104 => secrets.IP165 可以作为github变量传入！ shell脚本传入管理员密码 github.ref表示tag变量
+              run: |
+                  ssh root@39.105.4.104 "bash -s" < bin/deploy.sh ${{secretsWFP_PASSWORD}} ${{github.ref}}
+            - name: delete ssh key # 删除 ssh key
+              run: rm -rf ~/.ssh/id_rsa

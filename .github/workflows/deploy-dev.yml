@@ -24,8 +24,6 @@ jobs:
             - uses: actions/checkout@v2
             - name: set ssh key # 临时设置 ssh key 1 2
               run: |
-                  echo 'hello github actions'
-                  echo '${{secrets.WFP_ID_RSA}}'
                   mkdir -p ~/.ssh/
                   echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_rsa # secret 在这里配置 https://github.com/imooc-lego/biz-editor-server/settings/secrets
                   chmod 600 ~/.ssh/id_rsa
