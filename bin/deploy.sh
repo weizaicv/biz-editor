@@ -6,7 +6,7 @@
 
 teamPath="/home/work/lego-team" #team目录
 repoPath="/home/work/lego-team/biz-editor" #项目目录 要和repo同名
-repoGitUrl="git@github.com:weizaicv/biz-editor.git" #或者是https://username:$1@github.com/imooc-lego/biz-editor.git
+repoGitUrl="https://github.com/weizaicv/biz-editor.git" #或者是https://username:$1@github.com/imooc-lego/biz-editor.git
 
 if [ ! -d "$teamPath" ]; then
 	#不存在tream目录，则创建
