@@ -15,5 +15,6 @@ module.exports = {
         'no-unused-vars': 0,
         'no-console': 'off',
         'max-classes-per-file': 0,
+        "prettier/prettier":["error",{"endOfLine":"auto"}]
     },
 }

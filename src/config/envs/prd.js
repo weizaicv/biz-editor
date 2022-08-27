@@ -17,14 +17,14 @@ module.exports = {
         host: '39.105.4.105',
         port: '27017',
         dbName: 'imooc_lego_course',
-        password: 'weizai1992weizai'
+        password: 'weizai1992weizai',
     },
 
     // redis 连接配置
     redisConf: {
         port: '6379',
         host: '127.0.0.1',
-        password: '110'
+        password: '110',
     },
 
     // jwt 过期时间
