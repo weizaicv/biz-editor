@@ -5,7 +5,7 @@ on:
         tags:
             - 'v*.*.*' # 只针对 tag
 jobs:
-    deploy-dev:
+    deploy-prd:
         runs-on: ubuntu-latest
 
         steps:
