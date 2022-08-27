@@ -17,10 +17,10 @@ cd "$teamPath"
 
 if [ ! -d "$repoPath" ]; then
 	#不存在repo目录，则git clone (私有项目，需要github 用户名和密码)
-	echo ================ git clone start ================
+	echo ================ git clone start 1 ================
 	git clone "$repoGitUrl"
 	git remote remove origin; #删除origin，否则会暴露github密码
-	echo ================ git clone end ================
+	echo ================ git clone end 2 ================
 fi
 cd "$repoPath"
 git checkout . #撤销一切文件修改 否则会pull失败
