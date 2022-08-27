@@ -5,7 +5,7 @@
 module.exports = {
     // mysql 连接配置
     mysqlConf: {
-        host: '127.0.0.1',
+        host: '39.105.4.104',
         user: 'root',
         password: 'weizai1992weizai',
         port: '3306',
@@ -17,13 +17,14 @@ module.exports = {
         host: '39.105.4.105',
         port: '27017',
         dbName: 'imooc_lego_course',
+        user:'root',
         password: 'weizai1992weizai',
     },
 
     // redis 连接配置
     redisConf: {
         port: '6379',
-        host: '127.0.0.1',
+        host: '39.105.4.104',
         password: '110',
     },
 
