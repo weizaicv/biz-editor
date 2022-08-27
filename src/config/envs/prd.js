@@ -17,7 +17,7 @@ module.exports = {
         host: '39.105.4.105',
         port: '27017',
         dbName: 'imooc_lego_course',
-        user:'root',
+        user: 'root',
         password: 'weizai1992weizai',
     },
 
