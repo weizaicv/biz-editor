@@ -1,28 +1,35 @@
 /**
- * @description dev 配置
- * @author 双越
+ * 放到正常服务器上安装
  */
 
-const devConf = require('./dev')
+module.exports = {
+    // mysql 连接配置
+    mysqlConf: {
+        host: '127.0.0.1',
+        user: 'root',
+        password: 'weizai1992weizai',
+        port: '3306',
+        database: 'imooc_lego_course',
+    },
 
-// 修改 redis 连接配置
-Object.assign(devConf.redisConf, {
-    // 和 docker-compose 中配置的 service 名字一致
-    // 【注意】端口依然是 6379 ，而不是 6378 ，后者是宿主机的端口
-    host: 'editor-redis',
-})
+    // mongodb 连接配置
+    mongodbConf: {
+        host: '39.105.4.105',
+        port: '27017',
+        dbName: 'imooc_lego_course',
+        password: 'weizai1992weizai'
+    },
 
-// 修改 mongodb 连接配置
-Object.assign(devConf.mongodbConf, {
-    host: 'editor-mongo', // 和 docker-compose 中配置的 service 名字一致
-})
+    // redis 连接配置
+    redisConf: {
+        port: '6379',
+        host: '127.0.0.1',
+        password:"110"
+    },
 
-// 修改 mysql 连接配置
-Object.assign(devConf.mysqlConf, {
-    host: 'editor-mysql', // 和 docker-compose 中配置的 service 名字一致
-})
+    // jwt 过期时间
+    jwtExpiresIn: '1d', // 1. 字符串，如 '1h' '2d'； 2. 数字，单位是 s
 
-// 发布出来的 h5 域名
-devConf.h5Origin = 'http://182.92.168.192:8082'
-
-module.exports = devConf
+    // cors origin
+    corsOrigin: '*',
+}

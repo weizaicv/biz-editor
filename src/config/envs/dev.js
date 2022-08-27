@@ -1,6 +1,5 @@
 /**
- * @description dev 配置
- * @author 双越
+ * docker compose安装
  */
 
 module.exports = {
