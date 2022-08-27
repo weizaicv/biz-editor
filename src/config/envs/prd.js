@@ -24,7 +24,7 @@ module.exports = {
     redisConf: {
         port: '6379',
         host: '127.0.0.1',
-        password:"110"
+        password: '110'
     },
 
     // jwt 过期时间
