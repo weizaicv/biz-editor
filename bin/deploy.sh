@@ -24,6 +24,7 @@ if [ ! -d "$repoPath" ]; then
 fi
 cd "$repoPath"
 git checkout . #撤销一切文件修改 否则会pull失败
+git remote add origin "$repoGitUrl"
 git pull origin main # 重新下载最新mater代码 tag是基于master分支提交
 git fetch --tags #获取所有tags，否则光执行git pull origin master获取不到提交的分支
 git remote remove origin; # 删除 origin ，否则会暴露 github 密码
